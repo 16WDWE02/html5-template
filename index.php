@@ -21,12 +21,12 @@ switch( $requestedPage ) {
 		// Load the home page files
 		require 'app/controllers/HomeController.php';
 		$controller = new HomeController();
-		$controller->buildHTML();
 	break;
 
 	case 'products':
 		// Load the products page files
-		
+		require 'app/controllers/ProductsController.php';
+		$controller = new ProductsController();
 	break;
 
 	default: 
@@ -35,3 +35,9 @@ switch( $requestedPage ) {
 	break;
 
 }
+
+$controller->buildHTML();
+
+
+
+
